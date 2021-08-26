@@ -1,0 +1,60 @@
+.imgplane01, .imgplane02 {
+    opacity: 0;
+}
+
+.flyeff01 {
+    transform: scale(0.7);
+    position: absolute;
+    animation: flyaway1 6s ease-out infinite;
+}
+
+.flyeff02 {
+    position: absolute;
+    animation: flyaway2 6s ease-out infinite;
+}
+
+@keyframes flyaway1 {
+    0% {
+        left: -50%;
+        bottom: -20%;
+        opacity: 0;
+    }
+    40% {
+        left: 6%;
+        bottom: 5%;
+        opacity: 1;
+    }
+    52.5% {
+        left: 6%;
+        bottom: 5%;
+        opacity: 1;
+    }
+    100% {
+        left: 110%;
+        bottom: 55%;
+        opacity: 1;
+    }
+}
+
+@keyframes flyaway2 {
+    0% {
+        left: -50%;
+        bottom: -10%;
+        opacity: 1;
+    }
+    78.5% {
+        left: 85%;
+        bottom: 55%;
+        opacity: 1;
+    }
+    90% {
+        left: 85%;
+        bottom: 55%;
+        opacity: 1;
+    }
+    100% {
+        left: 110%;
+        bottom: 75%;
+        opacity: 1;
+    }
+}

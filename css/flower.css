@@ -1,0 +1,192 @@
+@import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
+@import url(https://fonts.googleapis.com/earlyaccess/cwtexfangsong.css);
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
+:root {
+  --allColor: #fffaf2;
+  --box1Color: #f8e4c2;
+ 
+  --btnsColor: #EDC887;
+  --btnsHoverBgColor: #e4d5bb;
+  --btnsHoverColor: #fff;
+  --title: #585858;
+  --label:#f8e4c2;
+}
+
+.dark {
+  --allColor: #080808;
+  --box1Color: #fff;
+  --footerColor: #0c0c0c;
+  --btnsColor: #EDC887;
+  --btnsHoverBgColor: #e4d5bb;
+  --btnsHoverColor: #fff;
+  --title: #fff;
+  --label:#000;
+}
+
+.htmlColor {
+  color: #FFF;
+}
+
+body {
+  background-color: var(--allColor);
+  font-family: 'Noto Serif TC', 'Playfair Display', serif !important;
+  transition: all 1.5s ease-in;
+}
+
+header {
+  width: 100%;
+  height: 100vh;
+  background-color: var(#fffaf2);
+}
+
+.box1 {
+  width: 35vw;
+  height: 35vw;
+  background-color: var(--box1Color);
+}
+
+footer {
+  margin: auto;
+  width: 70%;
+  border-top: 1px solid var(--title);
+}
+
+.container-fluid, .container {
+  height: 100vh;
+}
+
+#about {
+  position: relative;
+  overflow: hidden;
+}
+
+.img01 {
+  position: absolute;
+  width: 25vw;
+  height: 30vw;
+  top: 5%;
+  left: 15%;
+}
+
+.img02 {
+  position: absolute;
+  width: 25vw;
+  height: 25vw;
+  top: 8%;
+  left: 55%;
+}
+
+.img03 {
+  position: absolute;
+  width: 30vw;
+  height: 35vw;
+  top: 70%;
+  left: 66%;
+}
+
+.adjust1 {
+  width: 100%;
+  height: 100%;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, .5);
+}
+
+.adjust2 {
+  width: 100%;
+  height: 100%;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, .5);
+}
+
+.adjust3 {
+  width: 100%;
+  height: 100%;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, .5);
+}
+
+.title {
+  color: var(--title);
+  margin-top: 250px;
+  /* font-family: 'Dancing Script', cursive; */
+}
+
+.title2 {
+  color: var(--title);
+  /* font-family: 'Dancing Script', cursive; */
+}
+
+.changeLine {
+  color: var(--title);
+  white-space: pre-line;
+  margin-top: 30px;
+  font-size: 20px;
+  line-height: 50px;
+}
+
+.btns {
+  border: var(--btnsColor) 1px solid;
+  color: var(--btnsColor);
+  border-radius: 40px;
+  padding: 0.5rem 1.5rem;
+  font-size: 0.2rem;
+  outline: none;
+  background-color: transparent;
+  margin-top: 30px;
+  font-family: 'Noto Serif TC', 'Playfair Display', serif !important;
+}
+
+.btns:hover {
+  background-color: var(--btnsHoverBgColor);
+  color: var(--btnsHoverColor);
+}
+
+.plane {
+  position: absolute;
+  width: 200px;
+  animation: plane1 8s ease-in infinite;
+}
+
+@keyframes plane1 {
+  0% {
+    /* transform: translate(-300px,300px); */
+    left: -20%;
+    bottom: -140%;
+  }
+  30% {
+    /* transform: translate(-300px,300px); */
+    left: 20%;
+    bottom: -120%;
+  }
+  40% {
+    /* transform: translate(-300px,300px); */
+    left: 20%;
+    bottom: -120%;
+  }
+  60% {
+    /* transform: translate(2000px,-600px); */
+    /* left:80%;
+     bottom:50%; */
+    left: 100%;
+    bottom: -80%;
+  }
+  100% {
+    /* transform: translate(2000px,-600px); */
+    /* left:80%;
+     bottom:50%; */
+    left: 100%;
+    bottom: -80%;
+  }
+}
+
+#logo1, #logo2 {
+  width: 75px;
+}
+
+.galleryImg img {
+  width: 400px;
+  height: 450px;
+}
+
+.carousel-control-prev {
+  z-index: 20000;
+}

@@ -1,0 +1,80 @@
+
+
+
+
+
+.cardsl{
+    position: relative;
+  
+    overflow:hidden;
+}
+
+
+
+.content img{
+  max-width:100%;
+    filter: brightness(0.5);
+    width: 300px;
+    height:300px;
+    cursor: pointer;
+    
+}
+
+
+
+.card-body{
+   position: absolute;
+   left:50%;
+   top:50%;
+   transform: translate(-50%,-50%);
+   pointer-events: none;
+  
+}
+
+.cardsl:hover .card-body{
+  
+  transition:0.5s;
+
+}
+
+.content img:hover {
+  transition: 1s;
+  filter: brightness(1);
+  transform: scale(1.2);
+}
+
+
+
+
+.cardsl:hover span{
+ 
+  opacity: 0;
+  text-decoration: none;
+  color: #FFF;
+}
+
+.cardsl a{
+  
+  
+  text-decoration: none;
+  color: #FFF;
+  transition: 1s;
+}
+
+#second3{
+  padding: 200px;
+}
+
+
+.body-content{
+  width:92px;
+  font-size: 23px;
+ 
+}
+
+.btnCard{
+  color: #fff;
+
+}
+
+

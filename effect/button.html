@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            transition: all 2s ease;
+        }
+
+        .dark {
+            background-color: #292C35;
+        }
+
+        .dark p {
+            color: #FFF;
+        }
+
+        .checkbox {
+            opacity: 0;
+            position: absolute;
+        }
+
+        .checkbox:checked+.label .ball {
+            transform: translateX(24px);
+        }
+
+        label {
+            position: relative;
+            width: 50px;
+            height: 26px;
+            border-radius: 50px;
+            background-color: #111;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 5px;
+            transform: scale(1.5);
+        }
+
+        .ball {
+            background-color: #FFF;
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            transition: transform 0.2s ease;
+        }
+
+        .fa-moon {
+            color: bisque;
+        }
+
+        .fa-sun {
+            color: bisque;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="checkbox" class="checkbox" id="checkbox">
+    <label for="checkbox" class="label">
+        <i class="fas fa-moon"></i>
+        <i class="fas fa-sun"></i>
+        <div class="ball"></div>
+    </label>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex cumque voluptatem natus a omnis, quasi fuga quidem
+        quod aliquam maiores officiis, harum quaerat corporis debitis commodi illum. Blanditiis, voluptatibus vero.</p>
+    <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex cumque voluptatem natus a omnis, quasi fuga
+        quidem quod aliquam maiores officiis, harum quaerat corporis debitis commodi illum. Blanditiis, voluptatibus
+        vero.</span>
+</body>
+
+<script>
+    // const checkbox = document.getElementById('checkbox');
+    checkbox.addEventListener('click', () => {
+        document.body.classList.toggle('dark');
+    })
+</script>
+
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        .bg div {
+            position: relative;
+            width: auto;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .bg1 {
+            background: #fec5bb;
+        }
+
+        .bg2 {
+            background: #f8edeb;
+        }
+
+        .bg3 {
+            background: #90e0ef;
+        }
+
+        .bg4 {
+            background: #b7e4c7;
+        }
+
+        .bg5 {
+            background: #e2afff;
+        }
+
+        .bg4::after {
+            content: '';
+            background-image: url(../images/plane.png);
+            background-repeat: no-repeat;
+            width: 227px;
+            height: 135px;
+            transform: scale(0.7);
+            position: absolute;
+            animation: flyaway1 6s ease-out infinite;
+        }
+
+        .bg4::before {
+            content: '';
+            background-image: url(../images/plane.png);
+            background-repeat: no-repeat;
+            width: 227px;
+            height: 135px;
+            position: absolute;
+            animation: flyaway2 6s ease-out infinite;
+            z-index: 2;
+        }
+
+        @keyframes flyaway1 {
+            0% {
+                left: -50%;
+                bottom: -20%;
+                opacity: 0;
+            }
+
+            40% {
+                left: 6%;
+                bottom: 5%;
+                opacity: 1;
+            }
+
+            52.5% {
+                left: 6%;
+                bottom: 5%;
+                opacity: 1;
+            }
+
+            100% {
+                left: 110%;
+                bottom: 55%;
+                opacity: 1;
+            }
+        }
+
+        @keyframes flyaway2 {
+            0% {
+                left: -50%;
+                bottom: -10%;
+                opacity: 1;
+            }
+
+            78.5% {
+                left: 85%;
+                bottom: 55%;
+                opacity: 1;
+            }
+
+            90% {
+                left: 85%;
+                bottom: 55%;
+                opacity: 1;
+            }
+
+            100% {
+                left: 110%;
+                bottom: 75%;
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg">
+        <div class="bg1">AAA</div>
+        <div class="bg2">BBB</div>
+        <div class="bg3">CCC</div>
+        <div class="bg4">DDD</div>
+        <div class="bg5">EEE</div>
+    </div>
+</body>
+
+</html>

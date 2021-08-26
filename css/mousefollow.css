@@ -1,0 +1,24 @@
+#mousefollow {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border:2px #70d498;
+    border-top-style: dotted;
+    border-right-style: solid;
+    border-bottom-style: dotted;
+    border-left-style: solid;
+    position: absolute;
+    transition: 0.2s linear;
+    animation: animate 5s linear infinite;
+    pointer-events: none;
+    z-index: 100;
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

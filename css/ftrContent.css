@@ -1,0 +1,70 @@
+
+:root{
+    --fci:#585858;
+}
+
+
+.changeFci{
+    --fci:#FFF;
+}
+
+.ftr-container{
+    display:flex;
+    flex-direction: row;
+    justify-content:space-between;
+    padding: 70px 40px;
+    
+   
+}
+
+.iconRow{
+    display: flex;
+    flex-direction:row;
+    letter-spacing: 10px;
+}
+
+.ftr-icons>a{
+    width: 70px;
+    
+   padding: 5px;
+  
+
+}
+
+.ajIcon{
+    font-size: 30px;
+}
+
+
+
+.ftr-content-inner{
+    text-align: center;
+    color:var(--fci);
+}
+
+
+
+.ftr-content-inner  a{
+    text-decoration: none;
+    color:var(--fci);
+}
+
+
+.ftr-logo{
+   padding: 30px 0%;
+
+}
+
+.footerLog{
+   color:var(--fci);
+  text-decoration: none;
+  font-size: 2em;
+}
+
+#ftr{
+    margin-top: 200px;
+}
+
+#gallery{
+    margin-top: 200px;
+}

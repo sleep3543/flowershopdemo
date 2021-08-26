@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>鼠標跟隨</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: bisque;
+            font-family: sans-serif;
+        }
+
+        #box {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            border: 2px dotted brown;
+            position: absolute;
+            transition: 0.2s linear;
+            animation: animate 5s linear infinite;
+            pointer-events: none;
+        }
+
+        .boxhover {
+            width: 63px;
+            height: 63px;
+            animation: animateover 5s linear infinite;
+            cursor: pointer;
+        }
+
+        @keyframes animate {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes animateover {
+            0% {
+                transform: translate(-30%, -20%)rotate(0deg);
+            }
+
+            100% {
+                transform: translate(-30%, -20%)rotate(360deg);
+            }
+        }
+
+        a {
+            text-decoration: none;
+            color: brown;
+        }
+
+        a:hover {
+            background-color: burlywood;
+        }
+    </style>
+</head>
+
+<body>
+    <h2><a href="https://tw.yahoo.com/" target="_blank">Follow The Cursor | Javascript</a></h2>
+    <div id="box"></div>
+</body>
+
+<script>
+    var box = document.getElementById('box');
+    document.addEventListener('mousemove', function (e) {
+        // ================================================方法一(按照目前可視網頁大小)================================================
+        var clientX = e.clientX;
+        var clientY = e.clientY;
+        console.log('clientX座標是' + clientX, 'clientY座標是' + clientY);
+
+        //這是為了讓畫面出現滾動軸時跟隨物件不要因為座標產生誤差而跟丟
+        var st = document.documentElement.scrollTop || document.body.scrollTop;
+        var sl = document.documentElement.scrollLeft || document.body.scrollLeft;
+
+        box.style.left = clientX + sl - 15 + 'px';
+        box.style.top = clientY + st - 15 + 'px';
+
+        // ================================================方法二(IE不支援、按照整個網頁大小)================================================
+        var pageX = e.pageX;
+        var pageY = e.pageY;
+        // console.log('pageX座標是' + pageX, 'pageY座標是' + pageY);
+
+        // ================================================方法三(只支援IE)================================================
+        var offsetX = e.offsetX;
+        var offsetY = e.offsetY;
+        // console.log('offsetX座標是' + offsetX, 'offsetY座標是' + offsetY);
+
+        // ================================================方法四(按照螢幕大小)================================================
+        var screenX = e.screenX;
+        var screenY = e.screenY;
+        // console.log('screenX座標是' + screenX, 'screenY座標是' + screenY);
+    })
+</script>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #222F3E;
+            /* display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; */
+        }
+
+        button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 10px;
+            background-color: #fff;
+            border: none;
+            /* outline: none; */
+            font-size: 18px;
+            /* text-transform: uppercase; */
+        }
+
+
+        /* 置中方式目前確認有兩種
+
+        『方法一:放在要置中的標籤』
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+
+        『方法二:放在上層(外包容器)』
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh; */
+    </style>
+</head>
+
+<body>
+    <button>ChangeTheme</button>
+    <script>
+        var color = ["#e2e2df", '#e2cfc4', '#f7d9c4', '#faedcb', '#c9e4de', '#c6def1'];
+        var i = 0; //預設顏色為陣列第一種
+        document.querySelector('button').addEventListener('click', function(){
+            i = i < color.length ? ++i : 0;
+            document.querySelector('body').style.background = color[i];
+            document.querySelector('button').style.color = color[i];
+        })
+    </script>
+</body>
+
+</html>
